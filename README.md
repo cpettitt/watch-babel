@@ -60,6 +60,12 @@ initial transpile pass. You can close the watcher with `watcher.close()`.
 - `delete` is fired when a file is deleted.
 - `error` is fired if setting up the watcher failed.
 
+#### Properties
+
+- `srcDir` is the directory that is being watched.
+- `destDir` is the directory that transpiled files are writtent to.
+- `ready` indicates if the `ready` event has been fired.
+
 ### `watchBabel.version()`
 
 Returns the version of the `watchBabel` library.
