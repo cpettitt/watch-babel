@@ -1,0 +1,27 @@
+{
+  "camelcase": true,
+  "eqeqeq": true,
+  "expr": true,
+  "freeze": true,
+  "immed": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+
+  "laxbreak": true,
+
+  "node": true,
+  "esnext": true,
+
+  "globals": {
+      "beforeEach": false,
+      "afterEach": false,
+      "describe": false,
+      "it": false,
+      "Map": true,
+      "Set": true
+  }
+}
