@@ -1,6 +1,6 @@
 {
   "name": "watch-babel",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Watch for changes to ES6 source and transpile to ES5",
   "main": "index.js",
   "scripts": {
