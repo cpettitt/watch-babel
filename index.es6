@@ -100,17 +100,15 @@ class BabelWatcher extends EventEmitter {
           result = babel.transformFileSync(srcPath, this._babelOpts);
         } catch (e) {
           const frameDetails = e.codeFrame ? `\n${e.codeFrame}` : "";
-          this._logger.error("{cyan:Transpilation {red:failed} for {red:%s}} " +
-              "({magenta:%s} -> {magenta:%s}):\n{red:%s%s",
-              filePath, this._srcDir, this._destDir, e, frameDetails);
+          this._logger.error("{cyan:Transpilation {red:failed} for {green:%s}}:\n{red:%s%s",
+              srcPath, e, frameDetails);
           this.emit("failure", filePath, e);
           return;
         }
 
         // TODO handle external source maps
         fs.outputFileSync(destPath, result.code);
-        this._logger.debug("{cyan:Transpiled} {green:%s} ({magenta:%s} -> {magenta:%s})",
-            filePath, this._srcDir, this._destDir);
+        this._logger.debug("{cyan:Transpiled} {green:%s} -> {green:%s}", srcPath, destPath);
         this.emit("success", filePath);
         break;
       case "unlink":
@@ -118,8 +116,7 @@ class BabelWatcher extends EventEmitter {
           return;
         }
         fs.removeSync(destPath);
-        this._logger.debug("{cyan:Deleted} {green:%s} ({magenta:%s} -> {magenta:%s})",
-            filePath, this._srcDir, this._destDir);
+        this._logger.debug("{cyan:Deleted} {green:%s}", destPath);
         this.emit("delete", filePath);
         break;
       case "unlinkDir":
