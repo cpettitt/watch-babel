@@ -19,7 +19,7 @@ import { EventEmitter } from "events";
 import { Logger } from "eazy-logger";
 
 const DEFAULT_OPTS = {
-  logLevel: "off",
+  logLevel: "debug",
   persistent: true,
   delete: true,
   babel: {}
