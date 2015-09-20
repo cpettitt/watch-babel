@@ -21,7 +21,7 @@ import { Logger } from "eazy-logger";
 const DEFAULT_OPTS = {
   logLevel: "off",
   persistent: true,
-  delete: false,
+  delete: true,
   babel: {}
 };
 

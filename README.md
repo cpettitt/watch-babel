@@ -49,7 +49,7 @@ initial transpile pass. You can close the watcher with `watcher.close()`.
 - `persistent` (default: `true`). If `true` continue to watch the srcDir for
   changes after the initial transpilation. To close a persistent watcher use
   `watcher.close()`.
-- `delete` (default: `false`). When `true` a delete of a file in `srcDir` after
+- `delete` (default: `true`). When `true` a delete of a file in `srcDir` after
   the `ready` event will cause the associated file in `destDir` to be removed.
 - `babel` (default: {}). Use this to pass options to babel. For example, to
   generate inline source maps use `babel = { sourceMaps: "inline" }`.
