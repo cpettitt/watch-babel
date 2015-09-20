@@ -51,6 +51,8 @@ initial transpile pass. You can close the watcher with `watcher.close()`.
   `watcher.close()`.
 - `delete` (default: `false`). When `true` a delete of a file in `srcDir` after
   the `ready` event will cause the associated file in `destDir` to be removed.
+- `babel` (default: {}). Use this to pass options to babel. For example, to
+  generate inline source maps use `babel = { sourceMaps: "inline" }`.
 
 #### Events
 
